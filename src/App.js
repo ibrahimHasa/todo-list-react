@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import { v4 as uuidv4 } from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TodoInput from './components/TodoInput';
@@ -26,7 +28,7 @@ class App extends Component {
     <div className="container text-center">
       <div className="row">
       <div className="col-10 mx-auto col-md-8 mt-4">
-         <h3 className='text-capitalize text-center text-danger'>todo input</h3>
+         <h3 className='text-uppercase text-center text-primary'>todo input</h3>
       <TodoInput item={this.state.item} handleChange={this.handleChange} handleSubmit={this.handleSubmit} editItem = {this.state.editItem} />
       <TodoList items={this.state.items} clearList={this.clearList} handleDelete={this.handleDelete} editItem = {this.state.editItem} />
       </div>
